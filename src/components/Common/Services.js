@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import { useLocation } from "react-router-dom";
 import Header from "../Common/Header";
-import image from "../assets/img/services.jpg"; // Adjust the import path as necessary
+// import image from "../assets/img/services.jpg"; // Adjust the import path as necessary
+
 import SingleService from "./SingleService";
+import image from "../assets/img/web-services.jpg";
 
 const serviceData = {
     eCommerce: {

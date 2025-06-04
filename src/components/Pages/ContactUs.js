@@ -1,17 +1,23 @@
 import React, { Component } from "react";
+import { useLocation } from "react-router-dom";
 import Header from "../Common/Header";
-import image from "../assets/img/about/about.jpg"; // Adjust the import path as necessary
+import image from "../assets/img/contactus.jpg"; // Adjust the import path as necessary
 
 class ContactUs extends Component {
     render() {
+        const isContactRoute = this.props.location && this.props.location.pathname === "/contact";
         return (
             <div className="about-wrapper">
-                <Header
-                    image={image}
-                    title="Contact Us"
-                    subtitle="We'd love to hear from you"
-                    showButton={false}
-                />
+                {isContactRoute && (
+                    <Header
+                        image={image}
+                        title="Contact Us"
+                        subtitle="We'd love to hear from you"
+                        showButton={false}
+                        link="/contact"
+                        buttonText="Contact Us"
+                    />
+                )}
                 <section className="page-section" id="contact">
                     <div className="container">
                         <div className="text-center">
@@ -64,4 +70,9 @@ class ContactUs extends Component {
     }
 }
 
-export default ContactUs;
+function ContactUsWithLocation(props) {
+    const location = useLocation();
+    return <ContactUs {...props} location={location} />;
+}
+
+export default ContactUsWithLocation;
