@@ -4,6 +4,7 @@ import './App.css';
 import PageWrapper from './components/PageWrapper';
 import Home from './components/Pages/Home';
 import About from './components/Pages/About';
+import ContactUs from './components/Pages/ContactUs';
 import Services from './components/Common/Services';
 import Portfolio from './components/Common/Portfolio';
 import Team from './components/Common/Team';
@@ -25,7 +26,7 @@ function App() {
             <Route exact={true} path="/portfolio" element={<Portfolio />} />
             <Route exact={true} path="/about" element={<About />} />
             <Route exact={true} path="/team" element={<Team />} />
-            <Route exact={true} path="/contact" element={<div>Contact Page</div>} />
+            <Route exact={true} path="/contact" element={<ContactUs />} />
             {/* Add more routes here */}
           </Routes>
         </PageWrapper>

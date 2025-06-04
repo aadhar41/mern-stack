@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import Header from "../Common/Header";
 import image from "../assets/img/services.jpg"; // Adjust the import path as necessary
 import SingleService from "./SingleService";
@@ -61,4 +61,9 @@ class Services extends Component {
     }
 }
 
-export default Services;
+function ServicesWithLocation(props) {
+    const location = useLocation();
+    return <Services {...props} location={location} />;
+}
+
+export default ServicesWithLocation;
