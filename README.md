@@ -11,16 +11,24 @@ This is a full-stack web application built using the MERN stack:
 Below are example screens from the [`public/pages`](https://github.com/aadhar41/mern-stack/tree/master/public/pages) directory of the project:
 
 ### 1. Home Page (`home.html`)
-![Home Page](https://raw.githubusercontent.com/aadhar41/mern-stack/master/public/pages/screenshots/home.png)
+![Home Page](https://github.com/aadhar41/mern-stack/blob/master/public/pages/home-page.png)
 
-### 2. Login Page (`login.html`)
-![Login Page](https://raw.githubusercontent.com/aadhar41/mern-stack/master/public/pages/screenshots/login.png)
+### 2. About Page (`about.html`)
+![About Page](https://github.com/aadhar41/mern-stack/blob/master/public/pages/about-page.png)
 
-### 3. Register Page (`register.html`)
-![Register Page](https://raw.githubusercontent.com/aadhar41/mern-stack/master/public/pages/screenshots/register.png)
+### 3. Services Page (`services.html`)
+![Services Page](https://github.com/aadhar41/mern-stack/blob/master/public/pages/services-page.png)
 
-### 4. Dashboard Page (`dashboard.html`)
-![Dashboard Page](https://raw.githubusercontent.com/aadhar41/mern-stack/master/public/pages/screenshots/dashboard.png)
+### 4. Portfolio Page (`portfolio.html`)
+![Portfolio Page](https://github.com/aadhar41/mern-stack/blob/master/public/pages/portfolio-page.png)
+
+### 5. Team Page (`team.html`)
+![Team Page](https://github.com/aadhar41/mern-stack/blob/master/public/pages/team-page.png)
+
+### 6. Contact Us Page (`contactus.html`)
+![Contact Us Page](https://github.com/aadhar41/mern-stack/blob/master/public/pages/contactus-page.png)
+
+
 
 > **Note:** The above screenshots are for illustration. For the latest UI and code, refer to the [`public/pages`](https://github.com/aadhar41/mern-stack/tree/master/public/pages) directory in the repository.
 
