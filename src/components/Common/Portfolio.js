@@ -57,10 +57,10 @@ const portfolio = {
 
 class Portfolio extends Component {
     render() {
-        const isServicesRoute = this.props.location && this.props.location.pathname === "/portfolio";
+        const isPortfolioRoute = this.props.location && this.props.location.pathname === "/portfolio";
         return (
             <>
-                {isServicesRoute &&
+                {isPortfolioRoute &&
                     <Header
                         image={headerImage}
                         title={portfolio.title}

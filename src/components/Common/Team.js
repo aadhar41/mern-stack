@@ -38,11 +38,11 @@ const teamData = {
 
 class Team extends Component {
     render() {
-        const isServicesRoute = this.props.location && this.props.location.pathname === "/team";
+        const isTeamRoute = this.props.location && this.props.location.pathname === "/team";
 
         return (
             <>
-                {isServicesRoute &&
+                {isTeamRoute &&
                     <Header
                         image={headerImage}
                         title="Meet Our Team"
