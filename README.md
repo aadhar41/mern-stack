@@ -6,7 +6,25 @@ This is a full-stack web application built using the MERN stack:
 - **Express.js** – Backend web framework for Node.js
 - **React.js** – Frontend library for building user interfaces
 - **Node.js** – JavaScript runtime for the backend
+## Screenshots
 
+Below are example screens from the [`public/pages`](https://github.com/aadhar41/mern-stack/tree/master/public/pages) directory of the project:
+
+### 1. Home Page (`home.html`)
+![Home Page](https://raw.githubusercontent.com/aadhar41/mern-stack/master/public/pages/screenshots/home.png)
+
+### 2. Login Page (`login.html`)
+![Login Page](https://raw.githubusercontent.com/aadhar41/mern-stack/master/public/pages/screenshots/login.png)
+
+### 3. Register Page (`register.html`)
+![Register Page](https://raw.githubusercontent.com/aadhar41/mern-stack/master/public/pages/screenshots/register.png)
+
+### 4. Dashboard Page (`dashboard.html`)
+![Dashboard Page](https://raw.githubusercontent.com/aadhar41/mern-stack/master/public/pages/screenshots/dashboard.png)
+
+> **Note:** The above screenshots are for illustration. For the latest UI and code, refer to the [`public/pages`](https://github.com/aadhar41/mern-stack/tree/master/public/pages) directory in the repository.
+
+---
 ---
 
 ## Getting Started
