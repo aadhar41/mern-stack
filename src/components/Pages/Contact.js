@@ -1,9 +1,10 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import Header from "../Common/Header";
-import image from "../assets/img/contactus.jpg"; // Adjust the import path as necessary
+import image from "../assets/img/contactus.jpg";
 import Field from "../Common/Field";
-import { Formik, Form } from "formik";
+import { Formik, Form } from 'formik';
+import * as Yup from "yup";
 
 const fields = {
     sections: [
@@ -17,6 +18,26 @@ const fields = {
         ]
     ]
 };
+
+// Define Yup validation schema outside the component
+const SignupSchema = Yup.object().shape({
+    name: Yup.string()
+        .min(2, 'Too Short!')
+        .max(70, 'Too Long!')
+        .required('You must give us your name.'),
+    email: Yup.string()
+        .email('You need to provide a valid email address.')
+        .required('We need your email address to contact you.'),
+    phone: Yup.string()
+        .matches(/^\+?\d{7,15}$/, 'Phone number is not valid.')
+        .min(7, 'Phone number is too short.')
+        .max(15, 'Phone number is too long.')
+        .required('Phone number is required.'),
+    message: Yup.string()
+        .required('Message is required.')
+        .min(10, 'Message is too short.')
+        .max(500, 'Message is too long.')
+});
 
 function Contact(props) {
     const isContactRoute = props.location && props.location.pathname === "/contact";
@@ -55,28 +76,7 @@ function Contact(props) {
                             phone: "",
                             message: "",
                         }}
-                        validate={values => {
-                            const errors = {};
-                            if (!values.name) {
-                                errors.name = 'Required';
-                            }
-                            if (!values.email) {
-                                errors.email = 'Required';
-                            } else if (
-                                !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-                            ) {
-                                errors.email = 'Invalid email address';
-                            }
-                            if (!values.phone) {
-                                errors.phone = 'Required';
-                            } else if (!/^\+?\d{7,15}$/.test(values.phone)) {
-                                errors.phone = 'Invalid phone number';
-                            }
-                            if (!values.message) {
-                                errors.message = 'Required';
-                            }
-                            return errors;
-                        }}
+                        validationSchema={SignupSchema}
                         onSubmit={handleSubmit}
                     >
                         {({ values, handleChange, handleBlur, touched, errors }) => (
